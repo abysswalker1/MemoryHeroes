@@ -1,0 +1,33 @@
+.card {
+    width: 100px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    border: 3px groove #78909c;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; 
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+    background: url('./../../img/hero.jpg') center center;
+    background-size: cover;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(45deg,#78909c,#455a64);
+}
+
+.card-back-image {
+    object-fit: contain;
+    object-position: center;
+}
